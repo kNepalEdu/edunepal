@@ -1,13 +1,16 @@
 import React from 'react';
-import Navbar from './Navbar';
-import Main from './Main';
 import Footer from './Footer';
+// import ResponsiveDrawer from './Drawer';
+import { Box } from '@mui/material';
+import ResponsiveAppBar from './Navbar';
 
-const Layout = () => {
+const Layout = ({ children }) => {
   return (
     <React.Fragment>
-        {/* <Navbar /> */}
-        <Main />
+        <ResponsiveAppBar/>
+        <Box>
+          {children}
+        </Box>
         <Footer />
     </React.Fragment>
   )
