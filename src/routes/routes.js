@@ -4,39 +4,39 @@ import SignUp from "../components/signup/SignUp.jsx";
 import Contact from "../components/contact/Contact.jsx";
 import StudentProfile from "../components/studentProfile/StudentProfile.jsx";
 
-export const routes = [
+const routes = [
     {
         path: "/",
-        component: IndexPage,
+        component: <IndexPage />,
         isPrivate: false,
         sidebar: false
     },
     {
         path: "/signup",
-        component: SignUp,
+        component: <SignUp />,
         isPrivate: false,
         sidebar: false
     }, 
     {
         path: "/login",
-        component: SignIn,
+        component: <SignIn />,
         isPrivate: false,
         sidebar: false
     },
     {
         path: "/contact",
-        component: Contact,
+        component: <Contact />,
         isPrivate: false,
         sidebar: false
     },
     {
-        path: "/contact",
-        component: StudentProfile,
+        path: "/studentProfile",
+        component: <StudentProfile/>,
         isPrivate: true,
         sidebar: true
     },
-    
-
-
 ]
+
+
+export default routes;
 

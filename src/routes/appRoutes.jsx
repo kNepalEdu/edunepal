@@ -1,20 +1,24 @@
 import React from 'react';
-import { StateMachineProvider } from 'little-state-machine';
-import { Route } from 'react-router-dom';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+import routes from "./routes"
 
-
-
-const appRoutes = ({ component: Component, path, isPrivate, sidebar, ...rest }) => {
+const AppRoutes = ({ component: Component, path, isPrivate, sidebar, ...rest }) => {
   return (
-    <StateMachineProvider>
-        <Route 
-            path={path}
-            render = {(props) => <Component {...props} /> }
-            { ...rest }
-        />
-    </StateMachineProvider>
-    
+      <BrowserRouter>
+        <Routes>
+          {
+            routes.map(route => (
+              <Route 
+                key={route.path}
+                path={route.path}
+                element={route.component}
+              />
+            ))
+          }
+          
+        </Routes>
+      </BrowserRouter>
   )
 }
 
-export default appRoutes
+export default AppRoutes;

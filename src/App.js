@@ -1,16 +1,18 @@
 import React from "react";
 import { StateMachineProvider } from "little-state-machine";
 import Layout from "./layout/Layout";
-import { routes } from "./routes/routes"
+import AppRoutes from "./routes/appRoutes";
 
-function App(props) {
-  console.log(props)
+
+function App() {
+  
   return (
     <React.Fragment>
       <StateMachineProvider>
-        
-        
-
+        <Layout>
+          <AppRoutes />
+        </Layout>
+          
       </StateMachineProvider>
     </React.Fragment>
   );
