@@ -12,9 +12,15 @@ import Button from '@mui/material/Button';
 import Tooltip from '@mui/material/Tooltip';
 import MenuItem from '@mui/material/MenuItem';
 import AdbIcon from '@mui/icons-material/Adb';
+import logo from "../assets/logo.jpg";
+import { styled } from '@mui/material/styles';
 
-const pages = ['Products', 'Pricing', 'Blog'];
+const pages = ['About', 'Contact Us'];
 const settings = ['Profile', 'Account', 'Dashboard', 'Logout'];
+
+const BootstrapAppBar =  styled(AppBar)({
+  backgroundColor: "#fff",
+})
 
 function ResponsiveAppBar() {
   const [anchorElNav, setAnchorElNav] = React.useState(null);
@@ -36,26 +42,28 @@ function ResponsiveAppBar() {
   };
 
   return (
-    <AppBar position="static">
+    <BootstrapAppBar position="static" elevation={0}>
       <Container maxWidth="xl">
         <Toolbar disableGutters>
-          <AdbIcon sx={{ display: { xs: 'none', md: 'flex' }, mr: 1 }} />
+          <img src={logo} alt="logo" width={100} height={100}/>
           <Typography
-            variant="h6"
+            variant="subtitle1"
             noWrap
             component="a"
             href="/"
             sx={{
               mr: 2,
               display: { xs: 'none', md: 'flex' },
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              fontFamily: 'Sans-serif',
+              fontWeight: 600,
+              fontSize: 20,
+              // letterSpacing: '.3rem',
+              color: '#424242',
+              textTransform: "uppercase",
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Creative Nepal Youth Organization
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: 'flex', md: 'none' } }}>
@@ -96,29 +104,31 @@ function ResponsiveAppBar() {
           </Box>
           <AdbIcon sx={{ display: { xs: 'flex', md: 'none' }, mr: 1 }} />
           <Typography
-            variant="h5"
+            variant="subtitle1"
             noWrap
             component="a"
             href=""
             sx={{
-              mr: 2,
+              mr: 4,
               display: { xs: 'flex', md: 'none' },
-              flexGrow: 1,
-              fontFamily: 'monospace',
-              fontWeight: 700,
-              letterSpacing: '.3rem',
-              color: 'inherit',
+              fontFamily: 'Sans-serif',
+              fontWeight: 600,
+              fontSize: 20,
+              // letterSpacing: '.3rem',
+              color: '#424242',
+              textTransform: "uppercase",
               textDecoration: 'none',
             }}
           >
-            LOGO
+            Creative Nepal Youth Organization
+            
           </Typography>
           <Box sx={{ flexGrow: 1, display: { xs: 'none', md: 'flex' } }}>
             {pages.map((page) => (
               <Button
                 key={page}
                 onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: 'white', display: 'block' }}
+                sx={{ my: 2, color: '#424242', display: 'block' }}
               >
                 {page}
               </Button>
@@ -156,7 +166,7 @@ function ResponsiveAppBar() {
           </Box>
         </Toolbar>
       </Container>
-    </AppBar>
+    </BootstrapAppBar>
   );
 }
 export default ResponsiveAppBar;
