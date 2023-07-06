@@ -12,7 +12,7 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Box sx={{ bgcolor: color, height: "100vh" }}>
         <ResponsiveAppBar/>
-        <Box >
+        <Box mx={{ xs: 4, sm: 6, md: 8 , lg: 10, xl: 35 }}>
           {children}
         </Box>
         <Box sx={{ m: 6 }}>
