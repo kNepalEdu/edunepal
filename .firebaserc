@@ -1,0 +1,8 @@
+{
+  "projects": {
+    "default": "knepaledu-22cde",
+    "stage": "knepaledu-22cde"
+  },
+  "targets": {},
+  "etags": {}
+}

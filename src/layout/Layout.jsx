@@ -4,6 +4,8 @@ import Footer from './Footer';
 import { Box } from '@mui/material';
 import ResponsiveAppBar from './Navbar';
 import { grey } from '@mui/material/colors';
+import { indigo } from '@mui/material/colors';
+
 
 const color = grey[200];
 
@@ -16,7 +18,7 @@ const Layout = ({ children }) => {
           {children}
         </Box>
         <Box my={10} />
-        <Box sx={{ backgroundColor: "#213688", height: 200, }}>
+        <Box sx={{ backgroundColor: indigo[200], height: 200, }}>
           <Footer />
         </Box>
         
