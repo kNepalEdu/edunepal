@@ -22,7 +22,7 @@ const Footer = () => {
         </IconButton>
       </Box>
       <Box textAlign="center">
-        <Typography variant='subtitle1'>123 Kearney St, El Cerrito, CA 95776</Typography>
+        <Typography variant='subtitle1' >123 Kearney St, El Cerrito, CA 95776</Typography>
         
       </Box>
       <Box sx={{ textAlign: "center"}}>

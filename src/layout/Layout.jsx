@@ -12,10 +12,11 @@ const Layout = ({ children }) => {
     <React.Fragment>
       <Box sx={{ bgcolor: color, height: "100vh" }}>
         <ResponsiveAppBar/>
-        <Box mx={{ xs: 4, sm: 6, md: 8 , lg: 10, xl: 35 }}>
+        <Box mx={{ xs: 4, sm: 6, md: 8 , xl: 26 }}>
           {children}
         </Box>
-        <Box sx={{ m: 6 }}>
+        <Box my={10} />
+        <Box sx={{ backgroundColor: "#213688", height: 200, }}>
           <Footer />
         </Box>
         

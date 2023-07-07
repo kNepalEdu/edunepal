@@ -18,8 +18,9 @@ const BootstrapAppBar =  styled(AppBar)({
 function ResponsiveAppBar() {
   return (
     <BootstrapAppBar position="static" elevation={0}>
-      <Container maxWidth="xl">
-        <Toolbar disableGutters>
+      <Container maxWidth="xl" sx={{ height: 120 }}>
+        <Toolbar sx={{my: 2}}>
+          <Box my={4}/>
           <img src={logo} alt="logo" width={100} height={100}/>
           <Typography
             variant="subtitle1"
